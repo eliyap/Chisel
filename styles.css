@@ -20,6 +20,24 @@ img[alt~="3/4"] {
   margin-left: 12.5%;
 }
 
+/* Image Blurring */
+@keyframes unblur {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+img[alt~=blur] {
+  filter: blur(10px);
+}
+img[alt~=blur]:hover {
+  animation-name: unblur;
+  animation-duration: 0.25s;
+  filter: blur(0px);
+}
+
 @font-face {
   font-family: "task-list";
   src: local("Monaco");

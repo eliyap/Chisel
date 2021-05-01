@@ -4,12 +4,12 @@ img {
     width: 25%;
     margin-left: 37.5%;
   }
-  
+
   &[alt~="1/3"] {
     width: 33.3%;
     margin-left: 33.3%;
   }
-  
+
   &[alt~="1/2"] {
     width: 50%;
     margin-left: 25%;
@@ -23,5 +23,26 @@ img {
   &[alt~="3/4"] {
     width: 75%;
     margin-left: 12.5%;
+  }
+}
+
+/* Image Blurring */
+@keyframes unblur {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+img {
+  &[alt~="blur"] {
+    filter: blur(10px);
+
+    &:hover {
+      animation-name: unblur;
+      animation-duration: 0.25s;
+      filter: blur(0px);
+    }
   }
 }
