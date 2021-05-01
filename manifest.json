@@ -3,7 +3,7 @@
 	"name": "Chisel",
 	"version": "0.0.1",
 	"minAppVersion": "0.9.12",
-	"description": "Refinements to the Vanilla Obsidian Experience.",
+	"description": "Refinements to the vanilla Obsidian experience",
 	"author": "Elijah Yap",
 	"authorUrl": "eyap.dev",
 	"isDesktopOnly": false
