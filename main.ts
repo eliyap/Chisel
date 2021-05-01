@@ -1,4 +1,6 @@
-import { App, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import { App, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import CodeMirror from 'codemirror';
+import replaceText from 'replaceText';
 
 interface MyPluginSettings {
 	mySetting: string;
@@ -10,6 +12,7 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 
 export default class MyPlugin extends Plugin {
 	settings: MyPluginSettings;
+    cm: CodeMirror.Editor;
 
 	async onload() {
 		console.log('loading plugin');
@@ -23,16 +26,13 @@ export default class MyPlugin extends Plugin {
 		this.addStatusBarItem().setText('Status Bar Text');
 
 		this.addCommand({
-			id: 'open-sample-modal',
-			name: 'Open Sample Modal',
-			// callback: () => {
-			// 	console.log('Simple Callback');
-			// },
+			id: 'insert-pagebreak',
+			name: 'Insert Pagebreak',
 			checkCallback: (checking: boolean) => {
 				let leaf = this.app.workspace.activeLeaf;
 				if (leaf) {
 					if (!checking) {
-						new SampleModal(this.app).open();
+                        replaceText(leaf, `<hr class="pagebreak"/>`)
 					}
 					return true;
 				}
@@ -43,6 +43,7 @@ export default class MyPlugin extends Plugin {
 		this.addSettingTab(new SampleSettingTab(this.app, this));
 
 		this.registerCodeMirror((cm: CodeMirror.Editor) => {
+            this.cm = cm;
 			console.log('codemirror', cm);
 		});
 
