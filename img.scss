@@ -4,11 +4,12 @@ img {
     width: 25%;
     margin-left: 37.5%;
   }
+  
   &[alt~="1/3"] {
     width: 33.3%;
     margin-left: 33.3%;
   }
-
+  
   &[alt~="1/2"] {
     width: 50%;
     margin-left: 25%;
