@@ -35,16 +35,16 @@ img[alt~=blur]:hover {
 img[alt~=thin-border] {
   border: 1px solid var(--text-accent);
 }
-img img[alt~=mirror] {
+img[alt~=mirror] {
   transform: scaleX(-1);
 }
-img img[alt~=no-margin] {
+img[alt~=no-margin] {
   margin-left: 0 !important;
 }
-img img[alt~=rounded] {
+img[alt~=rounded] {
   border-radius: 0.5rem;
 }
-img img[alt~=bounce] {
+img[alt~=bounce] {
   animation-name: bounce;
   animation-duration: 1s;
   margin-left: 0;

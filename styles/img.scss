@@ -38,16 +38,16 @@ img {
   }
 
   /* Misc */
-  img[alt~="mirror"] {
+  &[alt~="mirror"] {
     transform: scaleX(-1);
   }
-  img[alt~="no-margin"] {
+  &[alt~="no-margin"] {
     margin-left: 0 !important;
   }
-  img[alt~="rounded"] {
+  &[alt~="rounded"] {
     border-radius: 0.5rem;
   }
-  img[alt~="bounce"] {
+  &[alt~="bounce"] {
     animation-name: bounce;
     animation-duration: 1s;
     margin-left: 0;
