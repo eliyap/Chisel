@@ -30,7 +30,7 @@ img[alt~="3/4"] {
   }
 }
 img[alt~=blur] {
-  filter: blur(10px);
+  filter: blur(6px);
 }
 img[alt~=blur]:hover {
   animation-name: unblur;
