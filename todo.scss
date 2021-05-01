@@ -1,0 +1,14 @@
+// Targets Edit Mode Todo Indicator: `[ ]` or `[x]`
+@font-face {
+  font-family: "task-list";
+  // default macOS monospace font
+  src: local("Monaco");
+  // Target only ` ` and `x` chars
+  unicode-range: U+0020, U+0078;
+}
+
+// Make width of indicator consistent!
+span.cm-formatting-task {
+  // must provide "normal" font for the [brackets] to use
+  font-family: task-list, var(--default-font);
+}

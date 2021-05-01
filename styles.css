@@ -20,4 +20,13 @@ img[alt~="3/4"] {
   margin-left: 12.5%;
 }
 
+@font-face {
+  font-family: "task-list";
+  src: local("Monaco");
+  unicode-range: U+0020, U+0078;
+}
+span.cm-formatting-task {
+  font-family: task-list, var(--default-font);
+}
+
 /*# sourceMappingURL=styles.css.map */
