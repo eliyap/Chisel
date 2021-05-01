@@ -10,7 +10,7 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 	mySetting: 'default'
 }
 
-export default class MyPlugin extends Plugin {
+export default class Chisel extends Plugin {
 	settings: MyPluginSettings;
     cm: CodeMirror.Editor;
 
@@ -84,9 +84,9 @@ class SampleModal extends Modal {
 }
 
 class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
+	plugin: Chisel;
 
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: Chisel) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
