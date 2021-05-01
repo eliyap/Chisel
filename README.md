@@ -6,8 +6,14 @@ Chisel offers simple refinements to the core Obsidian experience.
 
 ### Features
 
--   consistent checked / un-checked todo item width
--   wiki-linked image customization via `|` character, including:
-    -   making images smaller
-    -   blurring images (hover to unblur)
+-   make todos have consistent width when ☑️ vs ◻️
+-   customization of wiki-linked image appearance using `|` character, including:
+    -   shrinking images
+    -   blurring images (hover to reveal)
+    -   rounding corners
+    -   adding a border
+    -   mirroring the image
+    -   rotating the image
+    -   making image bounce back and forth
+-   inserting pagebreaks into exported PDFs
 

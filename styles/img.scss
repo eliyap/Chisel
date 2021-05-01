@@ -32,6 +32,17 @@ img {
     }
   }
 
+  /* Image Rotation */
+  &[alt~="rotate-90"] {
+    transform: rotate(90deg);
+  }
+  &[alt~="rotate-180"] {
+    transform: rotate(180deg);
+  }
+  &[alt~="rotate-270"] {
+    transform: rotate(270deg);
+  }
+
   /* Image Border */
   &[alt~="thin-border"] {
     border: 1px solid var(--text-accent);

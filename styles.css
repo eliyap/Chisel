@@ -1,6 +1,7 @@
 img {
   /* Image Size Changes */
   /* Image Blurring */
+  /* Image Rotation */
   /* Image Border */
   /* Misc */
 }
@@ -31,6 +32,15 @@ img[alt~=blur]:hover {
   animation-name: unblur;
   animation-duration: 0.25s;
   filter: blur(0px);
+}
+img[alt~=rotate-90] {
+  transform: rotate(90deg);
+}
+img[alt~=rotate-180] {
+  transform: rotate(180deg);
+}
+img[alt~=rotate-270] {
+  transform: rotate(270deg);
 }
 img[alt~=thin-border] {
   border: 1px solid var(--text-accent);
