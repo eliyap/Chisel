@@ -1,0 +1,7 @@
+div.pagebreak {
+  page-break-after: always;
+
+  @media print {
+    visibility: none;
+  }
+}
